@@ -13,7 +13,7 @@ public interface IRepository<T> where T : IAggregateRoot
     /// </summary>
     /// <param name="id">The identifier of the entity.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains the entity.</returns>
-    Task<T> GetByIdAsync(long id, CancellationToken cancellationToken = default);
+    Task<T> GetByIdAsync(object id, CancellationToken cancellationToken = default);
     /// </summary>
     /// <summary>
     /// Adds a new entity.
