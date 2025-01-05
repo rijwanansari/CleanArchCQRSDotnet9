@@ -16,7 +16,7 @@ string ZipCode,
 string? SpouseFirstName,
 string? SpouseLastName,
 string? SpouseEmail,
-string? SpousePhoneNumber) : AuditableWithBaseEntity<long>
+string? SpousePhoneNumber) : AuditableWithBaseEntity<long>, IAggregateRoot
 {
     public string FirstName { get; set; } = FirstName;
     public string LastName { get; set; } = LastName;
