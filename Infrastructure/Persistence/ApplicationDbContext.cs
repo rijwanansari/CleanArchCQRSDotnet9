@@ -14,7 +14,6 @@ namespace Infrastructure.Persistence;
 /// <param name="options">The options to be used by the DbContext.</param>
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
 {
-    public DbSet<UserProfile> UserProfiles => Set<UserProfile>();
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
